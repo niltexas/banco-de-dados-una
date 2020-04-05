@@ -1,6 +1,8 @@
 Banco de Dados - Una
 # Repositório de exercícios resolvidos
 
+# 1- Exercícios de Consultas
+
 show databases;
 
 #1) Selecione o banco de dados (esquema) pokédex.
@@ -129,7 +131,7 @@ select numero, nome, hp, ataque, defesa, total from pokemon where hp >= 100 and 
 #40)  Selecione todos os pokémons do tipos Water e Gelo, ordenados decrescente por total.
 select * from pokemon where tipo1 = "Water" and tipo2 = "Gelo" order by total desc;
 
-# 2-  Exercícios de Funções Agregadas
+# 2- Exercícios de Funções Agregadas
 #1)Quais são os valores máximo e mínimo das seguintes colunas:
 #total
 #hp
