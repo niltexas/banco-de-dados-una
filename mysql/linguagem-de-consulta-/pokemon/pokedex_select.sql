@@ -175,7 +175,7 @@ select count(distinct tipo1) as 'Tipos Primários' from pokemon;
 select sum(peso_kg) as 'Soma Pesos' from pokemon;
 
 #11) Qual é a quantidade de Pokémons lendários e não lendários?
-select count(lendario) as 'Pokemons != Lendários' from pokemon where lendario = 0;
+select lendario, count(numero) from pokemon group by lendario;
 
 #12) Qual é a quantidade de pokémons para cada uma das diferentes cores ordenadas decrescente?
 select cor, count(*) as 'Pokemons p/ Cor' from pokemon group by cor order by count(*) desc;
