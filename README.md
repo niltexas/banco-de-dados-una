@@ -1,8 +1,7 @@
 Banco de Dados - Una
 # Repositório de exercícios resolvidos
 
-# 1- Exercícios de Consultas
-
+# # 1- Exercícios de Consultas
 show databases;
 
 #1) Selecione o banco de dados (esquema) pokédex.
@@ -179,7 +178,7 @@ select count(distinct tipo1) as 'Tipos Primários' from pokemon;
 select sum(peso_kg) as 'Soma Pesos' from pokemon;
 
 #11) Qual é a quantidade de Pokémons lendários e não lendários?
-select count(lendario) as 'Pokemons != Lendários' from pokemon where lendario = 0;
+select lendario, count(numero) from pokemon group by lendario;
 
 #12) Qual é a quantidade de pokémons para cada uma das diferentes cores ordenadas decrescente?
 select cor, count(*) as 'Pokemons p/ Cor' from pokemon group by cor order by count(*) desc;
@@ -207,4 +206,3 @@ select geracao, avg(taxa_captura), count(tipo1), count(tipo2) from pokemon group
 
 #20) Qual é a quantidade de cores de cada um dos pokémons lendários em todas as gerações?
 select geracao, count(distinct cor) from pokemon where lendario = 1 group by geracao;
-
